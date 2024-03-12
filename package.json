@@ -1,0 +1,41 @@
+{
+  "name": "easybackend",
+  "version": "1.0.0",
+  "description": "ReactTs backend",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsnd --respawn --clear src/app.ts",
+    "build": "rimraf ./dist && tsc",
+    "start": "npm run build && node dist/app.ts"
+  },
+  "keywords": [
+    "reactts",
+    "backend",
+    "usta"
+  ],
+  "author": "Anthony Lopez",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "env-var": "^7.4.1",
+    "express": "^4.18.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.12.7",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^8.5.9",
+    "@types/morgan": "^1.9.3",
+    "@types/node": "^20.11.26",
+    "dotenv": "^16.4.5",
+    "nodemon": "^2.0.20",
+    "rimraf": "^5.0.5",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.2"
+  }
+}
