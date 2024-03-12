@@ -1,41 +1,25 @@
-=== create package.json ===
+Libraries
 
-npm init
-
-===== scripts =====
-
-"build": "tsc -w",
-"dev": "nodemon duild/index.js"
-
-
-===== libraries =====
-
-npm i cors
-npm i morgan
 npm i express
-npm i mongoose
+npm i express --save
+npm i --save-dev @types/express
+
+npm i cors -S
+npm i dotenv -S
+npm i multer -S
+npm i dotenv env-var
+npm install mongoose
 npm i bcryptjs
-npm i jsonwebtoken
 
-===== unnecessary =====
+npm i -D typescript @types/node ts-node-dev rimraf
 
-npm i dotenv --save-dev
-npm i nodemon --save-dev
+npx tsc --init --outDir dist/ --rootDir src
 
-===== types ======
+"dev": "tsnd --respawn --clear src/app.ts",
+"build": "rimraf ./dist && tsc",
+"start": "npm run build && node dist/app.ts"
 
-npm i @types/cors --save-dev
-npm i @types/morgan --save-dev
-npm i @types/express --save-dev
-npm i @types/jsonwebtoken --save-dev
 
-===== include Typescript =====
+You have to install Docker Desktop and Mongo Compass.
 
-Just in case you don't have installed Typescript
-npm i -g Typescript
-
-get-executionpolicy
-set-executionpolicy unrestricted
-
-tsc --init
-
+docker compose up -d
