@@ -23,3 +23,7 @@ npx tsc --init --outDir dist/ --rootDir src
 You have to install Docker Desktop and Mongo Compass.
 
 docker compose up -d
+
+
+
+Cambioos
